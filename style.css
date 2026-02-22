@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +8,59 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* Global */
 body{
     width: 100vw;
     height: 100vh;
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+}
+
+/* Label to page 1 */
+.Label-top-left {
+    width: 0;
+    height: 0;
+    border-top: 200px solid transparent;
+    border-right: 200px solid #750000;
+    border-bottom: 200px solid transparent;
+    position: fixed;
+    top: -200px;
+    left: -50px;
+    rotate: calc(40deg);
+}
+
+.Label-top-right {
+    width: 400px;
+    height: 300px;
+    background: rgba(117, 0, 0, 0.65);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    clip-path: polygon(
+        50% 0%, 
+        100% 0%, 
+        100% 100%, 
+        50% 100%, 
+        0% 50%
+    );
+}
+
+/* PAGE HOME */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: #750000;
 }
