@@ -16,22 +16,16 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 
-/* PAGE HOME */
-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     width: 100%;
-    height: 60px;
-    border: solid 1px red;
+    height: 100px;
     position: fixed;
     top: 0;
     z-index: 1;
+    border-bottom: solid 1px #750000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Label to page 1 */
 .Label-top-left {
@@ -57,6 +51,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     right: -10px;
+    z-index: 2;
     clip-path: polygon(
         50% 0%, 
         100% 0%, 
@@ -64,6 +59,39 @@ header {
         50% 100%, 
         0% 50%
     );
+}
+
+/* Menu e Links de navegação */
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+img.logo-az {
+    width: 20%;
+    position: fixed;
+    z-index: 3;
+    margin: 2%;
+    object-fit: cover;
+    filter: drop-shadow(0 10px 20px rgba(236, 13, 13, 0.5));
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    margin-right: 25%;
+}
+
+/* PAGE HOME */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
