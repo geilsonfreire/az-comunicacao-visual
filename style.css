@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Global */
@@ -21,17 +22,31 @@ header {
     height: 100px;
     position: fixed;
     top: 0;
-    z-index: 1;
-    border-bottom: solid 1px #750000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    left: 0;
+    z-index: 2;
+    /* Glass vermelho */
+    background: rgba(117, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    /* Borda inferior com destaque */
+    border-bottom: 1px solid rgba(255, 80, 80, 0.4);
+
+    /* Sombra elegante */
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.25),
+        0 2px 10px rgba(117, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
 }
+
 
 
 /* Label to page 1 */
 .Label-top-left {
     width: 0;
     height: 0;
-    border-top: 200px solid transparent;
+    border-top: 250px solid transparent;
     border-right: 200px solid #750000;
     border-bottom: 200px solid transparent;
     position: fixed;
@@ -44,11 +59,11 @@ header {
 .Label-top-right {
     width: 400px;
     height: 300px;
-    background: rgba(117, 0, 0, 0.65);
+    background: rgba(117, 0, 0, 0.35);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.7px);
+    backdrop-filter: blur(25px);
     position: fixed;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     right: -10px;
     z-index: 2;
@@ -68,7 +83,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 20px;
+    padding: 0 60px;
 }
 
 img.logo-az {
@@ -82,8 +97,61 @@ img.logo-az {
 
 nav ul {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     margin-right: 25%;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover elegante */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #f6ff00, #ff0000);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f6ff00;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Link ativo */
+nav ul li a.active {
+    color: #f6ff00;
+    font-weight: 600;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Ícone menu */
+nav i {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav i:hover {
+    color: #ffcc00;
 }
 
 /* PAGE HOME */
@@ -97,6 +165,7 @@ main {
 section {
     min-height: 100vh;
     border-bottom: solid 1px #750000;
+    scroll-margin-top: 100px;
 }
 
 /* Config hero hero storytelling */ 
