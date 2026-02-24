@@ -154,6 +154,58 @@ header nav i:hover {
     color: #ffcc00;
 }
 
+/*Menu dropdown */
+header nav ul li.menu-servicos {
+    position: relative;
+}
+
+header nav ul .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(117, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 80, 80, 0.4);
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.25),
+        0 2px 10px rgba(117, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+/* Remove padding padrão */
+.menu-dropdown ul {
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* Itens */
+.menu-dropdown li {
+    padding: 12px 20px;
+}
+
+.menu-dropdown a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Hover nos itens */
+.menu-dropdown li:hover {
+    background: #f5f5f5;
+}
+
+/* MOSTRAR AO PASSAR O MOUSE */
+.menu-servicos:hover .menu-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /*Lista de redes sociais*/
 body ul.social-media {
     position: fixed;
