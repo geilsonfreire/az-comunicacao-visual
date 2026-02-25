@@ -58,7 +58,7 @@ header {
 
 .Label-top-right {
     width: 400px;
-    height: 300px;
+    height: 50%;
     background: rgba(117, 0, 0, 0.35);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(25px);
