@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 /* Global */
-body{
+body {
     width: 100vw;
     min-height: 100vh;
     display: grid;
@@ -33,7 +33,7 @@ header {
     border-bottom: 1px solid rgba(255, 80, 80, 0.4);
 
     /* Sombra elegante */
-    box-shadow: 
+    box-shadow:
         0 8px 30px rgba(0, 0, 0, 0.25),
         0 2px 10px rgba(117, 0, 0, 0.3);
 
@@ -58,7 +58,11 @@ header {
 
 
 .Label-top-right {
+<<<<<<< HEAD
     width: 40%;
+=======
+    width: 400px;
+>>>>>>> origin/pedro
     height: 50%;
     background: rgba(117, 0, 0, 0.35);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -68,6 +72,7 @@ header {
     transform: translateY(-50%);
     right: -10px;
     z-index: 2;
+<<<<<<< HEAD
     clip-path: polygon(
         50% 0%, 
         100% 0%, 
@@ -93,6 +98,13 @@ header {
         transform: translateY(-50%) translateX(0);
         opacity: 1;
     }
+=======
+    clip-path: polygon(50% 0%,
+            100% 0%,
+            100% 100%,
+            50% 100%,
+            0% 50%);
+>>>>>>> origin/pedro
 }
 
 /* Menu e Links de navegação */
@@ -186,7 +198,7 @@ header nav ul .menu-dropdown {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 80, 80, 0.4);
-    box-shadow: 
+    box-shadow:
         0 8px 30px rgba(0, 0, 0, 0.25),
         0 2px 10px rgba(117, 0, 0, 0.3);
     opacity: 0;
@@ -249,12 +261,12 @@ body ul.social-media li a:hover {
 
 body ul.social-media li a i {
     transition: all 0.3s ease-in-out;
-    filter: drop-shadow(0 5px 5px black );
+    filter: drop-shadow(0 5px 5px black);
 }
 
 body ul.social-media li .fa-solid {
     transition: all 0.3s ease-in-out;
-    filter: drop-shadow(0 5px 5px black );
+    filter: drop-shadow(0 5px 5px black);
 }
 
 body ul.social-media li a i:hover {
@@ -273,7 +285,7 @@ body ul.social-media li.contato-fix {
     font-size: 1.5rem;
     color: white;
     transition: 0.3s;
-    filter: drop-shadow(0 10px 10px black );
+    filter: drop-shadow(0 10px 10px black);
 }
 
 /* PAGE HOME */
@@ -290,7 +302,7 @@ section {
     scroll-margin-top: 100px;
 }
 
-/* Config hero hero storytelling */ 
+/* Config hero hero storytelling */
 section#home {
     position: relative;
     height: 100vh;
@@ -331,7 +343,7 @@ section#home {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .slide-content {
@@ -365,16 +377,97 @@ section#home {
 }
 
 .indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.4);
-  cursor: pointer;
-  transition: 0.3s;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .indicators button.active {
-  background: white;
-  transform: scale(1.2);
+    background: white;
+    transform: scale(1.2);
+}
+
+
+.text-inicial {
+    color: #ff0000;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.text-second {
+    margin: 20px;
+    font-size: 24px;
+}
+
+.paragraph-about {
+    font-size: 21px;
+}
+
+.paragraph-about2 {
+    font-size: 21px;
+    padding-top: 15px;
+}
+
+.container-about {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-top: 40px;
+    left: 20%;
+    text-align: center;
+}
+
+.container-about2 {
+    display: inline-block;
+    position: absolute;
+    margin-top: 425px;
+    left: 10%;
+    text-align: center;
+    margin-left: 300px;
+
+}
+
+
+
+.clippy-geometric2 {
+    clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
+    background-color: #750000;
+    position: absolute;
+    width: 680px;
+    height: 555px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -500px;
+    rotate: 0deg;
+}
+
+.img-perfil {
+
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 50px;
+    margin-top: 70px;
+    border: 3px solid red;
+
+}
+
+
+.clippy-geometric {
+
+    clip-path: polygon(100% 61%, 66% 100%, 0 46%, 19% 0);
+    background-color: #750000;
+    width: 600px;
+    height: 400px;
+    margin-top: -200px;
+    position: absolute;
+    margin-left: 1100px;
+    rotate: 20deg;
+
+
 }
