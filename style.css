@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* Global */
@@ -64,7 +63,6 @@ header {
     backdrop-filter: blur(25px);
     position: fixed;
     top: 60%;
-    transform: translateY(-50%);
     right: 0px;
     z-index: 2;
 
@@ -88,13 +86,6 @@ header {
     opacity: 1;
 }
 
-/*Saida do label */
-.Label-top-right.hide {
-    transform: translateY(-50%) translateX(120%);
-    opacity: 0;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.5s ease;
-}
 
 /* Menu e Links de navegação */
 header nav {
