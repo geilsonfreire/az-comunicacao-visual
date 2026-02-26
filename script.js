@@ -79,39 +79,26 @@ const slides = document.querySelectorAll(".slide");
 document.addEventListener("DOMContentLoaded", () => {
 
     const label = document.querySelector(".Label-top-right");
-
-    const sectionsToHide = document.querySelectorAll(`
-        #about,
-        #facades,
-        #totems,
-        #slatted,
-        #brises,
-        #Signs,
-        #doors,
-        #marquise,
-        #pergolas,
-        #clients,
-        #partners
-    `);
-
-    let isAnySectionVisible = false;
+    const homeSection = document.querySelector("#home");
 
     const observer = new IntersectionObserver((entries) => {
 
-        isAnySectionVisible = entries.some(entry => entry.isIntersecting);
+        entries.forEach(entry => {
 
-        if (isAnySectionVisible) {
-            label.classList.add("hide");
-        } else {
-            label.classList.remove("hide");
-        }
+            if (entry.isIntersecting) {
+                // Está no HOME → mostrar
+                label.classList.remove("hide");
+            } else {
+                // Saiu do HOME → esconder
+                label.classList.add("hide");
+            }
+
+        });
 
     }, {
         threshold: 0.3
     });
 
-    sectionsToHide.forEach(section => {
-        observer.observe(section);
-    });
+    observer.observe(homeSection);
 
 });
