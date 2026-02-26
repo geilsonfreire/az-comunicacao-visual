@@ -74,3 +74,44 @@ const slides = document.querySelectorAll(".slide");
     });
 
 });
+
+// Efeito de removeção do label de links social 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const label = document.querySelector(".Label-top-right");
+
+    const sectionsToHide = document.querySelectorAll(`
+        #about,
+        #facades,
+        #totems,
+        #slatted,
+        #brises,
+        #Signs,
+        #doors,
+        #marquise,
+        #pergolas,
+        #clients,
+        #partners
+    `);
+
+    let isAnySectionVisible = false;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        isAnySectionVisible = entries.some(entry => entry.isIntersecting);
+
+        if (isAnySectionVisible) {
+            label.classList.add("hide");
+        } else {
+            label.classList.remove("hide");
+        }
+
+    }, {
+        threshold: 0.3
+    });
+
+    sectionsToHide.forEach(section => {
+        observer.observe(section);
+    });
+
+});
