@@ -79,11 +79,13 @@ const slides = document.querySelectorAll(".slide");
 document.addEventListener("DOMContentLoaded", () => {
 
     const label = document.querySelector(".Label-top-right");
-    const homeSection = document.querySelector("#home");
+    const homeSection = document.getElementById("home");
 
     const observer = new IntersectionObserver((entries) => {
 
         entries.forEach(entry => {
+            console.log("Intersecting:", entry.isIntersecting);
+            console.log("Ratio:", entry.intersectionRatio);
 
             if (entry.isIntersecting) {
                 // Está no HOME → mostrar
@@ -96,9 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }, {
-        threshold: 0.3
+        threshold: 0.6
     });
 
     observer.observe(homeSection);
-
 });
