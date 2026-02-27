@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+      
 /* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
 }
 
 /* Global */
 body {
-    width: 100vw;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -40,8 +38,6 @@ header {
     transition: all 0.3s ease;
 }
 
-
-
 /* Label to page 1 */
 .Label-top-left {
     width: 0;
@@ -65,9 +61,9 @@ header {
     backdrop-filter: blur(25px);
     position: fixed;
     top: 60%;
-    transform: translateY(-50%);
-    right: -10px;
+    right: 0px;
     z-index: 2;
+
     clip-path: polygon(
         50% 0%, 
         100% 0%, 
@@ -76,24 +72,18 @@ header {
         0% 50%
     );
 
-    /* Começa fora da tela */
+    /* Começa escondido */
     transform: translateY(-50%) translateX(120%);
     opacity: 0;
     
-    animation: slideInRight 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),opacity 0.5s ease;
 }
 
-@keyframes slideInRight {
-    from {
-        transform: translateY(-50%) translateX(120%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(-50%) translateX(0);
-        opacity: 1;
-    }
+.Label-top-right.show {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
 }
+
 
 /* Menu e Links de navegação */
 header nav {
@@ -286,6 +276,7 @@ main {
 
 section {
     min-height: 100vh;
+    min-height: 100dvh;
     border-bottom: solid 1px #750000;
     scroll-margin-top: 100px;
 }
@@ -458,4 +449,4 @@ section#home {
     rotate: 20deg;
 
 
-}
+} 
