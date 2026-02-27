@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-      
+
 /* Reset */
 * {
     margin: 0;
@@ -64,19 +64,17 @@ header {
     right: 0px;
     z-index: 2;
 
-    clip-path: polygon(
-        50% 0%, 
-        100% 0%, 
-        100% 100%, 
-        50% 100%, 
-        0% 50%
-    );
+    clip-path: polygon(50% 0%,
+            100% 0%,
+            100% 100%,
+            50% 100%,
+            0% 50%);
 
     /* Começa escondido */
     transform: translateY(-50%) translateX(120%);
     opacity: 0;
-    
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),opacity 0.5s ease;
+
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
 }
 
 .Label-top-right.show {
@@ -372,39 +370,79 @@ section#home {
 
 
 .text-inicial {
-    color: #ff0000;
-    margin: 20px;
-    font-size: 30px;
+    font-size: 42px;
     font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, #ffd700, #ffb700, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    overflow: hidden;
 }
+
+.text-inicial::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(248, 236, 123, 0.9),
+            transparent);
+
+    animation: brilho 3s infinite;
+}
+
+@keyframes brilho {
+    0% {
+        left: -120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+
+
 
 .text-second {
     margin: 20px;
     font-size: 24px;
+
+ 
+
+
 }
 
 .paragraph-about {
     font-size: 21px;
+    color: white;
 }
 
 .paragraph-about2 {
     font-size: 21px;
     padding-top: 15px;
+    color: white;
 }
 
 .container-about {
     display: flex;
     position: absolute;
     justify-content: center;
-    margin-top: 40px;
-    left: 20%;
+    margin-top: 60px;
+    left: 23%;
     text-align: center;
 }
 
 .container-about2 {
     display: inline-block;
     position: absolute;
-    margin-top: 425px;
+    margin-top: 450px;
     left: 10%;
     text-align: center;
     margin-left: 300px;
@@ -429,10 +467,10 @@ section#home {
 
     width: 300px;
     height: 300px;
-    margin-right: 50px;
+    margin-right: 60px;
     border-radius: 50px;
-    margin-top: 70px;
-    border: 3px solid red;
+    margin-top: 50px;
+    border: 4px solid rgb(255, 217, 0);
 
 }
 
@@ -449,4 +487,121 @@ section#home {
     rotate: 20deg;
 
 
-} 
+}
+
+#about {
+    background: linear-gradient(135deg, #ff0000, #7a0000);
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.08);
+    top: -150px;
+    left: -150px;
+    transform: rotate(45deg);
+}
+
+#about::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: -150px;
+    right: -150px;
+    transform: rotate(45deg);
+}
+
+.slogan {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.slogan::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6),
+            transparent);
+    animation: brilho 3s infinite;
+}
+
+@keyframes brilho {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.container-about3 {
+    position: relative;
+    display: inline-block;
+}
+
+.img-visual {
+    width: 500px;
+    border-radius: 12px;
+}
+
+.container-about3 {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.img-visual {
+    width: 800px;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+/* CAIXA DOS CARDS */
+.experience-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 80px;
+}
+
+/* CARD */
+.experience-card {
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+}
+
+.missao-az{
+    margin-top:100px;
+}
+
+.missao-az-img{
+    border-radius: 30px;
+    width: 800px;
+    margin-right: 10px;
+    filter: drop-shadow( 16px 16px 10px  black);
+}
