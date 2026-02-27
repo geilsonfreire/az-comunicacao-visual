@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!target) return;
 
-            const headerOffset = 100; // Altura do header fixo
+            const headerOffset = 10; // Altura do header fixo
             const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerOffset;
 
