@@ -97,18 +97,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // =============================================
 
     const navAnchors = document.querySelectorAll('nav a[href^="#"]');
+    const header = document.querySelector("header");
 
     navAnchors.forEach(anchor => {
 
         anchor.addEventListener("click", function (e) {
 
-            e.preventDefault(); // Impede o scroll padrão do navegador
+            e.preventDefault();
 
-            const target = document.querySelector(this.getAttribute("href"));
+            const targetId = this.getAttribute("href");
+            const target = document.querySelector(targetId);
 
             if (!target) return;
 
-            const headerOffset = 10; // Altura do header fixo
+            // 🔥 Altura dinâmica do header
+            const headerOffset = header ? header.offsetHeight : 0;
+
+            // 📐 Cálculo preciso da posição
             const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerOffset;
 
@@ -142,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }, {
-        threshold: 0.6
+        threshold: 0.5
     });
 
     labelObserver.observe(homeSection);
