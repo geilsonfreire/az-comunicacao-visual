@@ -292,7 +292,10 @@ main {
 section {
     min-height: 100vh;
     min-height: 100dvh;
-    border-bottom: solid 1px #750000;
+    background:
+            radial-gradient(circle at 50% 65%, rgba(16, 42, 77, 0.5) 0%, transparent 55%),
+            linear-gradient(to bottom, #0a1a2f 0%, #05070d 100%);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
     scroll-margin-top: 100px;
 }
 
@@ -385,83 +388,53 @@ section#home {
     transform: scale(1.2);
 }
 
+/*Seçao about */
 
-.text-inicial {
-    color: #ff0000;
-    margin: 20px;
-    font-size: 30px;
-    font-weight: 800;
+.clippy-geometrics {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.text-second {
-    margin: 20px;
-    font-size: 24px;
+
+.clippy-geometric-left {
+    clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
+    background-color: #750000;
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 0;
 }
 
-.paragraph-about {
-    font-size: 21px;
-}
-
-.paragraph-about2 {
-    font-size: 21px;
-    padding-top: 15px;
+.clippy-geometric-right {
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 60% 100%, 0% 20%);
+    background-color: #750000;
+    width: 15rem;
+    height: 20rem;
+    top: 100%;
+    transform: translateY(-100%);
+    right: 0px;
 }
 
 .container-about {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    margin-top: 40px;
-    left: 20%;
-    text-align: center;
+    padding: 2rem;
 }
 
-.container-about2 {
-    display: inline-block;
+/*About Slide - Image*/
+.about-slide {
     position: absolute;
-    margin-top: 425px;
-    left: 10%;
-    text-align: center;
-    margin-left: 300px;
-
+    rotate: 15deg;
+    
 }
 
-
-
-.clippy-geometric2 {
-    clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
-    background-color: #750000;
-    position: absolute;
-    width: 680px;
-    height: 555px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -500px;
-    rotate: 0deg;
-}
-
-.img-perfil {
-
-    width: 300px;
-    height: 300px;
-    margin-right: 50px;
-    border-radius: 50px;
-    margin-top: 70px;
-    border: 3px solid red;
-
-}
-
-
-.clippy-geometric {
-
-    clip-path: polygon(100% 61%, 66% 100%, 0 46%, 19% 0);
-    background-color: #750000;
-    width: 600px;
-    height: 400px;
-    margin-top: -200px;
-    position: absolute;
-    margin-left: 1100px;
-    rotate: 20deg;
-
-
+.about-slide video {
+    width: 18rem;
+    height: auto;
+    margin-left: 5rem;
+    object-fit: cover;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    border-radius: 25px;
 }
