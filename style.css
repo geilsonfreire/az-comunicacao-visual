@@ -388,9 +388,23 @@ section#home {
 }
 
 /*Seçao about */
+section#about {
+    position: relative;
+    overflow: hidden;
+}
+
+.container-about {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    padding-top: 4px;
+}
 
 .clippy-geometrics {
-    height: 100%;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
     display: flex;
     justify-content: space-between;
 }
@@ -399,7 +413,7 @@ section#home {
 .clippy-geometric-left {
     clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
     background-color: #750000;
-    position: relative;
+    position: absolute;
     width: 30rem;
     height: 20rem;
     top: 50%;
@@ -408,7 +422,7 @@ section#home {
 }
 
 .clippy-geometric-right {
-    position: relative;
+    position: absolute;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 60% 100%, 0% 20%);
     background-color: #750000;
     width: 15rem;
@@ -418,22 +432,128 @@ section#home {
     right: 0px;
 }
 
-.container-about {
-    padding: 2rem;
-}
 
-/*About Slide - Image*/
-.about-slide {
+/*About - Video*/
+.about-video-wrapper {
     position: absolute;
+    left: 5rem;
     rotate: 15deg;
     
 }
 
-.about-slide video {
+.about-video-wrapper video {
     width: 18rem;
     height: auto;
     margin-left: 5rem;
     object-fit: cover;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     border-radius: 25px;
+}
+
+/* ================================
+   SOBRE - CARROSSEL ELEGANTE
+================================ */
+
+.about-carousel {
+    position: relative;
+    width: 30rem;
+    height: 15rem;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.about-card {
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(120, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 80, 80, 0.4);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 5px 15px rgba(117, 0, 0, 0.4);
+
+    color: white;
+
+    transform: translateX(100%);
+}
+
+/* Primeira entra */
+.card-1 {
+    animation: slide1 10s infinite;
+}
+
+/* Segunda entra depois */
+.card-2 {
+    animation: slide2 10s infinite;
+}
+
+@keyframes slide1 {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide2 {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.about-card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.about-card h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #f6ff00, #ff0000);
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
 }
