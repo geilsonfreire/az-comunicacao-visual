@@ -1,0 +1,222 @@
+/*Seçao about */
+section#about {
+    position: relative;
+    overflow: hidden;
+}
+
+.container-about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 4px;
+}
+
+.container-about-wapper-carrocel {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    padding-top: 4px;
+}
+
+.clippy-geometrics {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.clippy-geometric-left {
+    clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
+    background-color: #750000;
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 0;
+}
+
+.clippy-geometric-right {
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 60% 100%, 0% 20%);
+    background-color: #750000;
+    width: 15rem;
+    height: 20rem;
+    top: 100%;
+    transform: translateY(-100%);
+    right: 0px;
+}
+
+
+/*About - Video*/
+.about-video-wrapper {
+    position: absolute;
+    left: 5rem;
+    rotate: 15deg;
+
+}
+
+.about-video-wrapper video {
+    width: 18rem;
+    height: auto;
+    margin-left: 5rem;
+    object-fit: cover;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    border-radius: 25px;
+}
+
+/* ================================
+   SOBRE - CARROSSEL ELEGANTE
+================================ */
+
+.about-carousel {
+    position: relative;
+    width: 30rem;
+    height: 15rem;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.about-card {
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    color: white;
+    transform: translateX(100%);
+}
+
+/* Primeira entra */
+.card-1 {
+    animation: slide1 10s infinite;
+}
+
+/* Segunda entra depois */
+.card-2 {
+    animation: slide2 10s infinite;
+}
+
+@keyframes slide1 {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide2 {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    40% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.about-card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.about-card h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #f6ff00, #ff0000);
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/*==============
+    Container de about missão, visão e valores
+==============*/
+.about-inf-card {
+    width: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+}
+
+.info-card {
+    width: 10rem;
+    padding: 1.5rem 1rem;
+    background-color: #ffffffee;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-card img {
+    width: auto;
+    max-height: 4rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-card h3 {
+    font-size: .9rem;
+    font-weight: 700;
+    color: #750000;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-card p {
+    font-size: 0.6rem;
+    line-height: 1.4;
+    color: #333;
+    font-weight: 300;
+}
