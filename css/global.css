@@ -31,3 +31,34 @@ section {
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
     scroll-margin-top: 100px;
 }
+
+/* ================================
+   WHATSAPP BOTÃO FLUTUANTE
+================================ */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #20BA5A);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 30;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn:active {
+    transform: scale(0.95);
+}
