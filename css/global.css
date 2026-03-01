@@ -331,12 +331,20 @@ section {
 
 }
 
+.group {
+    display: flex;
+    will-change: transform;
+    animation: scrolling 10s linear infinite;
+    gap: 20px;
+
+
+}
 
 .caroussel-card {
     width: 100%;
     height: auto;
     color: white;
-    animation: scroll 10s linear infinite;
+
 
 }
 
@@ -370,13 +378,13 @@ section {
     width: 7rem;
     height: 8rem;
     border-radius: 10px;
-  
+
 
 
 }
 
 .carrousel-img :hover {
- 
+
     width: 8rem;
     height: 9rem;
     transition: 0.6s;
@@ -390,7 +398,7 @@ section {
 
 /* animação infinita */
 
-@keyframes scroll {
+@keyframes scrolling {
     from {
         transform: translateX(0);
     }
