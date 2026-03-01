@@ -153,3 +153,38 @@ document.addEventListener("DOMContentLoaded", () => {
     labelObserver.observe(homeSection);
 
 });
+
+
+// =============================================
+// 🧩 Buttom whatsApp com Tooltip
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+    const tooltip = document.querySelector(".whatsapp-tooltip");
+
+    let displayCount = 0;
+    const maxDisplays = 3;
+
+    function showTooltipCycle() {
+        if (displayCount >= maxDisplays) return;
+
+        setTimeout(() => {
+            tooltip.classList.add("show");
+            displayCount++;
+
+            // Fica visível por 8s
+            setTimeout(() => {
+                tooltip.classList.remove("show");
+
+                // Espera 10s antes do próximo ciclo
+                if (displayCount < maxDisplays) {
+                    setTimeout(showTooltipCycle, 10000);
+                }
+
+            }, 8000);
+
+        }, displayCount === 0 ? 3000 : 0);
+        // 3s apenas na primeira vez
+    }
+
+    showTooltipCycle();
+});
