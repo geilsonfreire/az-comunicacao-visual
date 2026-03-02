@@ -272,37 +272,6 @@ section {
     transform: rotateX(0deg);
 }
 
-
-.glass {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 1, 1, 0.386);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 0, 0, 0.444);
-    opacity: 0.8;
-    transition: 0.4s;
-    align-items: center;
-   
-}
-
-.glass h3 {
-    margin-top: -80px;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    font-weight: 700;
-}
-
-.card:hover .glass {
-    opacity: 2;
-}
-
 .card__title {
     margin: auto;
     font-size: 24px;
@@ -382,7 +351,7 @@ section {
 
 .carrousel-img img {
     width: auto;
-    height: 1.5rem;
+    height: 1.2rem;
     object-fit: cover;
     border-radius: 5px;
     transition: transform 0.4s ease;
