@@ -348,7 +348,7 @@ section {
 
 .carrousel-img img {
     width: auto;
-    height: 1.7rem;
+    height: 1.5rem;
     object-fit: cover;
     border-radius: 5px;
     transition: transform 0.4s ease;
