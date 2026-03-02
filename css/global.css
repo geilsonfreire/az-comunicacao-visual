@@ -226,6 +226,7 @@ section {
 }
 
 .card {
+    position: relative;
     width: auto;
     background-color: #f2f2f2;
     border-radius: 10px;
@@ -239,8 +240,8 @@ section {
 }
 
 .img-card {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     fill: #333;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     object-fit: cover;
@@ -254,6 +255,7 @@ section {
 
 .card__content {
     position: absolute;
+    inset: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -268,6 +270,37 @@ section {
 
 .card:hover .card__content {
     transform: rotateX(0deg);
+}
+
+
+.glass {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 1, 1, 0.386);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.444);
+    opacity: 0.8;
+    transition: 0.4s;
+    align-items: center;
+   
+}
+
+.glass h3 {
+    margin-top: -80px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+
+.card:hover .glass {
+    opacity: 2;
 }
 
 .card__title {
@@ -291,7 +324,7 @@ section {
 }
 
 .card__description {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* animação escrevendo */
@@ -339,6 +372,7 @@ section {
     font-weight: bold;
     color: white;
 }
+
 
 
 .carrousel-img {
