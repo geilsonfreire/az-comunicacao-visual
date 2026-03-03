@@ -87,7 +87,6 @@ header nav {
 }
 
 
-
 header nav ul {
     display: flex;
     gap: 40px;
@@ -157,11 +156,6 @@ header nav ul li a.active::after {
 .text-orcamento-aqui a:hover {
     color: #000000;
 }
-
-
-
-
-
 
 
 /* Ícone menu */
