@@ -174,7 +174,5 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach((card, index) => {
     card.style.transitionDelay = `${index * 0.03}s`;
     observer.observe(card);
-
-    
 });
 
