@@ -150,7 +150,7 @@ section {
 #totems,
 #slatted,
 #brises,
-#sings,
+#Signs,
 #doors,
 #marquise,
 #pergolas {
@@ -210,6 +210,18 @@ section {
     margin: auto auto;
 }
 
+.facades {
+    height: 100vh;
+    background-image: url("assets/img/sua-imagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 .fachadas-h2 {
     color: white;
     border-bottom: 4px solid;
@@ -224,6 +236,22 @@ section {
     border-bottom: 4px solid;
     border-image: linear-gradient(90deg, #f6ff00, #ff0000) 1;
 }
+
+
+
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 
 .card {
     position: relative;
