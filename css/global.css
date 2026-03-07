@@ -87,8 +87,10 @@ section {
 /* CARROSEL CLIENTES E PARCEIROS */
 .container-track {
     min-width: 100dvw;
-    background: rgba(101, 95, 112, 0.445);
+    background: #ffffff;
+    overflow: hidden;
     margin-top: 40px;
+    border-top: 2px solid #f5b400;
 }
 
 .carousel-track {
@@ -107,30 +109,32 @@ section {
 }
 
 .text-caroussel h3 {
-    font-size: 1rem;
+    font-size: .5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     font-weight: bold;
-    color: white;
+    color: #000000;
 }
 
 
 
 .carrousel-img {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 25px;
 }
 
 .carrousel-img img {
     width: auto;
     height: 1.2rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
     transition: transform 0.4s ease;
 }
 
 .carrousel-img img:hover {
-    transform: scale(2.1);
+    transform: scale(1.3);
 }
 
 
