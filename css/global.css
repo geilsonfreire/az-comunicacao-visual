@@ -120,17 +120,17 @@ section {
 
 .carrousel-img {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
 .carrousel-img img {
-    width: auto;
-    height: 1.2rem;
+    flex: 0 0 120px;
+    width: 120px;
+    height: 40px;
     object-fit: contain;
-    border-radius: 5px;
-    transition: transform 0.4s ease;
+    object-position: center;
+    transition: transform 0.35s ease;
 }
 
 .carrousel-img img:hover {
