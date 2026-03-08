@@ -160,7 +160,6 @@ header nav ul li a.active::after {
 }
 
 
-
 .servicos {
     cursor: pointer;
 }
@@ -259,4 +258,12 @@ header nav ul .menu-dropdown::before {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+
+/* ================================================
+Menunu mobille
+==================================================*/
+.menu-mobile {
+    display: none;
 }
