@@ -30,10 +30,10 @@
     font-size: 14px;
     line-height: 1.6;
     color: #ccc;
-   
+
 }
 
-.paragrafo-email{
+.paragrafo-email {
     white-space: nowrap;
 }
 
@@ -109,13 +109,44 @@
 }
 
 
- iframe{
+iframe {
     border-radius: 10px;
     margin-left: -30px;
- }
+}
 
 
- .social-media-footer a {
-   font-size: 30px;
-   
- }
+.social-media-footer a {
+    font-size: 30px;
+
+}
+
+@media (max-width: 480px) {
+    .social-media-footer ul {
+        font-size: 25px;
+        display: flex;
+        gap: 20px;
+    
+    }
+
+}
+
+@media (max-width: 768px) {
+    .social-media-footer ul {
+        font-size: 25px;
+        display: flex;
+        gap: 20px;
+    
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .social-media-footer ul {
+        font-size: 25px;
+        display: flex;
+        gap: 20px;
+    
+    }
+    
+}

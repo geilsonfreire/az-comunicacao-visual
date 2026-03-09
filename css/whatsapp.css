@@ -109,3 +109,23 @@
         font-size: 24px;
     }
 }
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        width: 90px;
+        height: 90px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .whatsapp-btn {
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}
