@@ -342,7 +342,56 @@ header nav {
 ========================================================= */
 
 @media (max-width: 768px) {
+     /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid 
+    }
+
+    img.logo-az {
+        height: 6rem;
+        margin: 1rem;
+    }
+
+    .Label-top-right {
+        width: 40%;
+        height: 30%;
+        top: 50%;
+    }
+
     
+    /* Ícone menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+    } 
+
+   
+    .menu-list {
+        display: block;
+        position:fixed;
+        flex-direction:column;
+        top: 100px;
+        right:0;
+        width:60%;
+        height: 100dvh;
+        padding:40px 20px;
+        background:rgba(120, 0, 0, 0.534);
+        backdrop-filter:blur(20px);
+        transition:0.4s;
+    }
+
+    .menu-list li{
+        margin-bottom: 20px;
+    }
+
+    .text-orcamento-aqui a {
+        font-size: 1rem;
+    }
+
+
 }
 
 /* =========================================================
