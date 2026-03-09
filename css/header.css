@@ -310,11 +310,10 @@ header nav {
         top: 100px;
         right:0;
         width:60%;
-        height: 100dvh;
+        height: 100vh;
         padding:40px 20px;
         background:rgba(120, 0, 0, 0.534);
         backdrop-filter:blur(20px);
-
         transition:0.4s;
     }
 
@@ -376,7 +375,7 @@ header nav {
         top: 100px;
         right:0;
         width:60%;
-        height: 100dvh;
+        height: 100vh;
         padding:40px 20px;
         background:rgba(120, 0, 0, 0.534);
         backdrop-filter:blur(20px);
@@ -391,7 +390,6 @@ header nav {
         font-size: 1rem;
     }
 
-
 }
 
 /* =========================================================
@@ -399,5 +397,21 @@ header nav {
 ========================================================= */
 
 @media (max-width: 900px) {
-   
+    .menu-list {
+        margin-right: 0;
+        margin-left: 5%;
+    }
+
+    img.logo-az {
+        height: 8rem;
+        margin: 1.5rem;
+    }
+
+    .Label-top-right {
+        width: 50%;
+        height: 40%;
+        top: 50%;
+    }
+
+
 }
