@@ -87,14 +87,14 @@ header nav {
 }
 
 
-header nav ul {
+.menu-list {
     display: flex;
     gap: 40px;
     margin-right: 15%;
     list-style: none;
 }
 
-header nav ul li a {
+.menu-list a {
     color: white;
     text-decoration: none;
     font-size: 1.3rem;
@@ -105,7 +105,7 @@ header nav ul li a {
 }
 
 /* Hover elegante */
-header nav ul li a::after {
+.menu-list a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -116,26 +116,25 @@ header nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-header nav ul li a:hover {
+.menu-list a:hover {
     color: #f6ff00;
 }
 
-header nav ul li a:hover::after {
+.menu-list a:hover::after {
     width: 100%;
 }
 
 /* Link ativo */
-header nav ul li a.active {
+.menu-list a.active {
     color: #f6ff00;
     font-weight: 600;
 }
 
-header nav ul li a.active::after {
+.menu-list a.active::after {
     width: 100%;
 }
 
 .botton-agende {
-
     padding: .2rem .9rem;
     border-radius: 20px;
     border: solid 1px #f6ff00;
@@ -143,6 +142,7 @@ header nav ul li a.active::after {
     font-weight: 700;
     margin-left: 190px;
     margin-top: 20px;
+    
 }
 
 .botton-agende:hover {
@@ -160,7 +160,6 @@ header nav ul li a.active::after {
 }
 
 
-
 .servicos {
     cursor: pointer;
 }
@@ -169,6 +168,7 @@ header nav ul li a.active::after {
     padding: .2rem .9rem;
     border-radius: 20px;
     border: solid 1px #f6ff00;
+    background: #4ee906;
 }
 
 .text-orcamento-aqui:hover {
@@ -186,23 +186,24 @@ header nav ul li a.active::after {
 
 
 /* Ícone menu */
-header nav i {
+.menu-toggle {
     color: white;
     font-size: 2rem;
     cursor: pointer;
     transition: 0.3s;
+    display: none;
 }
 
-header nav i:hover {
+.menu-toggle:hover {
     color: #ffcc00;
 }
 
 /*Menu dropdown */
-header nav ul li.menu-servicos {
+.menu-servicos {
     position: relative;
 }
 
-header nav ul .menu-dropdown {
+.menu-servicos .menu-dropdown {
     position: absolute;
     width: 300px;
     margin-top: 18px;
@@ -223,7 +224,7 @@ header nav ul .menu-dropdown {
     z-index: 10;
 }
 
-header nav ul .menu-dropdown::before {
+.menu-dropdown::before {
     content: "";
     position: absolute;
     top: -10px;
@@ -248,8 +249,8 @@ header nav ul .menu-dropdown::before {
 
 .menu-dropdown a {
     text-decoration: none;
-    font-weight: 100;
-    font-size: 1em;
+    font-weight: 500;
+    font-size: .9rem;
     display: block;
 }
 
@@ -259,4 +260,144 @@ header nav ul .menu-dropdown::before {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+    /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid 
+    }
+
+    img.logo-az {
+        height: 6rem;
+        margin: 1rem;
+    }
+
+    
+    /* Ícone menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+    } 
+
+   
+    .menu-list {
+        display: block;
+        position:fixed;
+        flex-direction:column;
+        top: 100px;
+        right:0;
+        width:60%;
+        height: 100dvh;
+        padding:40px 20px;
+        background:rgba(120, 0, 0, 0.534);
+        backdrop-filter:blur(20px);
+
+        transition:0.4s;
+    }
+
+    .menu-list li{
+        margin-bottom: 20px;
+    }
+
+    .text-orcamento-aqui a {
+        font-size: 1rem;
+    }
+
+    /* MOSTRAR AO PASSAR O MOUSE */
+    .menu-servicos:focus-within .menu-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+     /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid 
+    }
+
+    img.logo-az {
+        height: 6rem;
+        margin: 1rem;
+    }
+
+    .Label-top-right {
+        width: 40%;
+        height: 30%;
+        top: 50%;
+    }
+
+    
+    /* Ícone menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+    } 
+
+   
+    .menu-list {
+        display: block;
+        position:fixed;
+        flex-direction:column;
+        top: 100px;
+        right:0;
+        width:60%;
+        height: 100dvh;
+        padding:40px 20px;
+        background:rgba(120, 0, 0, 0.534);
+        backdrop-filter:blur(20px);
+        transition:0.4s;
+    }
+
+    .menu-list li{
+        margin-bottom: 20px;
+    }
+
+    .text-orcamento-aqui a {
+        font-size: 1rem;
+    }
+
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+   
 }

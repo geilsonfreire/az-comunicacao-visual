@@ -1,0 +1,45 @@
+/*secao cards servicos  */
+
+.container-servicos {
+    width: 100%;
+}
+
+.container-cards {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 60rem;
+    height: 25rem;
+    margin: auto auto;
+}
+
+.facades {
+    height: 100vh;
+    background-image: url("assets/img/sua-imagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.fachadas-h2 {
+    border-bottom: 1px solid #f5b400;
+    box-shadow: 0 4px 28px rgba(252, 249, 249, 0.3);
+    padding: 4px 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.fachadas-h2 h2 {
+    color: white;
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    padding: 4px 1.2rem;
+    margin-top: 1.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
