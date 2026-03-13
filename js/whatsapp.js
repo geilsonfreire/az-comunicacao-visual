@@ -1,43 +1,104 @@
 ﻿// =============================================
-// Buttom WhatsApp com Tooltip (ciclo temporizado)
+// WhatsApp Tooltip (ciclo temporizado)
 // =============================================
+
 if (!window.__whatsappTooltipCycleInitialized) {
-    window.__whatsappTooltipCycleInitialized = true;
 
-    const tooltips = document.querySelectorAll(".whatsapp-tooltip");
-    const INITIAL_DELAY_MS = 5000;
-    const VISIBLE_MS = 5000;
-    const HIDDEN_MS = 10000;
-    const MAX_CYCLES = 3;
+    window.__whatsappTooltipCycleInitialized = true
 
-    if (tooltips.length > 0) {
-        let cycles = 0;
+    const tooltips = document.querySelectorAll(".whatsapp-tooltip")
+    const whatsappBtn = document.querySelector(".whatsapp-btn")
 
-        const showTooltips = () => {
-            tooltips.forEach((tooltip) => tooltip.classList.add("show"));
-        };
+    const INITIAL_DELAY_MS = 5000
+    const VISIBLE_MS = 5000
+    const HIDDEN_MS = 10000
+    const MAX_CYCLES = 3
 
-        const hideTooltips = () => {
-            tooltips.forEach((tooltip) => tooltip.classList.remove("show"));
-        };
+    let cycles = 0
+    let stopped = false
 
-        const runCycle = () => {
-            if (cycles >= MAX_CYCLES) {
-                return;
+
+    const showTooltips = () => {
+
+        if (stopped) return
+
+        tooltips.forEach(t => t.classList.add("show"))
+
+    }
+
+
+    const hideTooltips = () => {
+
+        tooltips.forEach(t => t.classList.remove("show"))
+
+    }
+
+
+    const runCycle = () => {
+
+        if (cycles >= MAX_CYCLES || stopped) return
+
+        showTooltips()
+
+        setTimeout(() => {
+
+            hideTooltips()
+            cycles++
+
+            if (cycles < MAX_CYCLES && !stopped) {
+
+                setTimeout(runCycle, HIDDEN_MS)
+
             }
 
-            showTooltips();
+        }, VISIBLE_MS)
 
-            setTimeout(() => {
-                hideTooltips();
-                cycles += 1;
-
-                if (cycles < MAX_CYCLES) {
-                    setTimeout(runCycle, HIDDEN_MS);
-                }
-            }, VISIBLE_MS);
-        };
-
-        setTimeout(runCycle, INITIAL_DELAY_MS);
     }
+
+
+    setTimeout(runCycle, INITIAL_DELAY_MS)
+
+
+
+    // =============================================
+    // Clique no botão → parar tooltip
+    // =============================================
+
+    if (whatsappBtn) {
+
+        whatsappBtn.addEventListener("click", () => {
+
+            stopped = true
+            hideTooltips()
+
+        })
+
+    }
+
+    const whatsappChat = document.querySelector(".whatsapp-chat")
+    const chatClose = document.querySelector(".chat-close")
+
+    if (whatsappBtn && whatsappChat) {
+
+        whatsappBtn.addEventListener("click", () => {
+
+            stopped = true
+            hideTooltips()
+
+            whatsappChat.classList.toggle("show")
+
+        })
+
+    }
+
+    if (chatClose) {
+
+        chatClose.addEventListener("click", () => {
+
+            whatsappChat.classList.remove("show")
+
+        })
+
+    }
+
 }

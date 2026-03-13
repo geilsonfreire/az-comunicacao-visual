@@ -97,6 +97,105 @@
     margin-right: 6px;
 }
 
+/* Chat Box */
+
+.whatsapp-chat {
+
+    position: absolute;
+    bottom: 90px;
+    right: 30px;
+
+    width: 260px;
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+
+    transition: all .35s ease;
+
+}
+
+/* Mostrar chat */
+
+.whatsapp-chat.show {
+
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+
+}
+
+/* Header */
+
+.chat-header {
+
+    background: #25D366;
+    color: white;
+
+    padding: 10px 14px;
+
+    font-weight: 600;
+
+    border-radius: 12px 12px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.chat-header img {
+    width: auto;
+    height: 8rem;
+}
+
+.chat-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* Corpo */
+
+.chat-body {
+
+    padding: 16px;
+    font-size: 14px;
+    color: #333;
+
+}
+
+/* Botão */
+
+.chat-button {
+
+    display: block;
+
+    margin: 0 16px 16px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
 
 
 /* Mobile ajuste */
