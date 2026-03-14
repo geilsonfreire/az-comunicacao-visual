@@ -203,7 +203,7 @@ header nav {
     position: relative;
 }
 
-.menu-servicos .menu-dropdown {
+.menu-dropdown {
     position: absolute;
     width: 300px;
     margin-top: 18px;
@@ -300,11 +300,11 @@ header nav {
         display: block;
         position: absolute;
         right: 5%;
+        z-index: 1001;
     } 
 
    
     .menu-list {
-        display: block;
         position:fixed;
         flex-direction:column;
         top: 100px;
@@ -315,14 +315,28 @@ header nav {
         background:rgba(120, 0, 0, 0.534);
         backdrop-filter:blur(20px);
         transition:0.4s;
+
+        /* estado fechado */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+        z-index: 1000;
     }
 
-    .menu-list li{
-        margin-bottom: 20px;
+    .menu-list.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
     }
 
     .text-orcamento-aqui a {
         font-size: 1rem;
+    }
+
+    .menu-dropdown {
+        width: 250px;
     }
 
     /* MOSTRAR AO PASSAR O MOUSE */
