@@ -15,21 +15,20 @@
 }
 
 
+
 /*About - Video*/
 .about-video-wrapper {
     position: absolute;
-    left: 5rem;
-    rotate: 15deg;
-
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .about-video-wrapper video {
-    width: 18rem;
-    height: auto;
-    margin-left: 5rem;
+    width: 100%;
+    height: 100%;
+    
     object-fit: cover;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    border-radius: 25px;
 }
 
 /* ================================
