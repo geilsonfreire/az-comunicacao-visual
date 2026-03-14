@@ -204,11 +204,13 @@
     }
 
     .about-inf-card {
-        flex-direction: column;
+        display: flex;
+
         align-items: center;
+        justify-content: center;
     }
 
-    
+
 
 }
 
@@ -218,21 +220,45 @@
 
 @media (max-width: 480px) {
 
-    .about-card h2 {
-        font-size: 22px;
+
+    .about-inf-card {
+       
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        
     }
 
-    .about-card p {
-        font-size: 14px;
+
+    .about-carousel {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
     }
 
-    .info-card {
-        padding: 15px;
+    .about-card {
+        position: relative;
+        transform: translateX(0);
+        margin-bottom: 1rem;
     }
 
-    .info-card img {
-        width: 45px;
+    .about-video-wrapper {
+        position: absolute;
+
+        rotate: 0deg;
+        margin-bottom: 1rem;
     }
+
+    .about-video-wrapper video {
+        width: 100%;
+        
+        justify-content: center;
+        height: auto;
+        margin-left: 0;
+        
+    }
+    
 
 
 }

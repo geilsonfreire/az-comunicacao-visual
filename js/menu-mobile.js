@@ -4,7 +4,7 @@ const menu = document.querySelector(".menu-list");
 toggle.addEventListener("click", () => {
     menu.classList.toggle("active");
 
-});
+}                                                                                                                                                                                                                               );
 
 document.addEventListener("click", (event) => {
     if (!menu.classList.contains("active")) return;

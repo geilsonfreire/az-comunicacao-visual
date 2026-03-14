@@ -149,12 +149,17 @@ ul.social-media li a i:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
+       
 
     }
 
     .slide-content h2 {
         margin-right: 700px;
         text-align: start;
+        margin-left: -20px;
+        font-size: 1rem;
+
+        
         
     }
 
@@ -162,6 +167,7 @@ ul.social-media li a i:hover {
         display: flex;
         text-align: start;
         margin-right: 550px;
+        margin-left: -20px;
     }
 
     .slide img {
@@ -196,14 +202,34 @@ ul.social-media li a i:hover {
 }
 
 
-@media (max-width:1024px) {
+@media (max-width:900px) {
+
+    #home {
+        height: 80vh;
+    }
+
+    .about-inf-card{
+  
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-content {
+        left: 5%;
+        right: 5%;
+        bottom: 15%;
+        max-width: 100%;
+    }
 
     .slide-content h2 {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
     }
 
     .slide-content p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
 }
+
+
+
