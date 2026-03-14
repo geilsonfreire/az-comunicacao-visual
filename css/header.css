@@ -203,7 +203,7 @@ header nav {
     position: relative;
 }
 
-.menu-servicos .menu-dropdown {
+.menu-dropdown {
     position: absolute;
     width: 300px;
     margin-top: 18px;
@@ -301,40 +301,51 @@ header nav {
         display: block;
         position: absolute;
         right: 5%;
-    }
-
+        z-index: 1001;
+    } 
 
     .menu-list {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #0a1a2f;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        transform: translateY(-150%);
-        transition: 0.4s;
+        position:fixed;
+        flex-direction:column;
+        top: 100px;
+        right:0;
+        width:60%;
+        height: 100vh;
+        padding:40px 20px;
+        background:rgba(120, 0, 0, 0.534);
+        backdrop-filter:blur(20px);
+        transition:0.4s;
+
+        /* estado fechado */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+        z-index: 1000;
     }
 
     .menu-list.active {
-        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
     }
 
-    /* dropdown mobile */
+    .text-orcamento-aqui a {
+        font-size: 1rem;
+    }
 
     .menu-dropdown {
-        position: static;
-        background: none;
-        box-shadow: none;
-        display: block;
+        width: 250px;
     }
 
-    .menu-dropdown li a {
-        color: white;
+    /* MOSTRAR AO clicar O MOUSE */
+    .menu-servicos:focus-within .menu-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
-
+    
 }
 
 
@@ -370,6 +381,34 @@ header nav {
         display: block;
         position: absolute;
         right: 5%;
+    } 
+
+   
+    .menu-list {
+        position:fixed;
+        flex-direction:column;
+        top: 100px;
+        right:0;
+        width:60%;
+        height: 100vh;
+        padding:40px 20px;
+        background:rgba(120, 0, 0, 0.534);
+        backdrop-filter:blur(20px);
+        transition:0.4s;
+
+        /* estado fechado */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .menu-list.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
     }
 
 
