@@ -102,11 +102,16 @@
 /* Mobile ajuste */
 @media (max-width: 480px) {
     .whatsapp-btn {
-        width: 58px;
-        height: 58px;
+        width: 30px;
+        height: 30px;
         bottom: 20px;
         right: 20px;
         font-size: 24px;
+    }
+
+    .bottom-whatsapp {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -118,6 +123,15 @@
         right: 20px;
         font-size: 24px;
     }
+
+    .bottom-whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -128,4 +142,22 @@
         right: 20px;
         font-size: 24px;
     }
+
+    .bottom-whatsapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+    }
+
+    .whatsapp-tooltip {
+        z-index: 1000;
+        bottom: 110px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
 }

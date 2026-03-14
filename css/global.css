@@ -96,11 +96,11 @@ section {
     display: flex;
     min-width: 100%;
     margin-top: 40px;
-    padding: 0.5rem ;
+    padding: 0.5rem;
     border-top: 2px solid #f5b400;
 }
 
-.container-track::before{
+.container-track::before {
     content: "   Nossos Clientes";
     position: relative;
     background-color: #750000;
@@ -115,7 +115,7 @@ section {
     color: #ffffff
 }
 
-.carousel-track {    
+.carousel-track {
     display: flex;
     width: 100%;
     animation: scroll 15s linear infinite;
@@ -149,7 +149,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px; 
+    gap: 25px;
 }
 
 .carrousel-img img {
@@ -204,16 +204,33 @@ section {
     }
 
     .clippy-geometric-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
         width: 20rem;
         height: 30rem;
     }
 
-
     .clippy-geometric-right {
+        right: -100px;
+        bottom: 100px;
         width: 15rem;
         height: 15rem;
     }
-    
+
+
+
+
 }
 
 /* =========================================================
@@ -222,7 +239,7 @@ section {
 
 @media (max-width: 768px) {
     section {
-        scroll-margin-top: 80px;
+        scroll-margin-top: 64px;
     }
 
     .text-caroussel h3 {
@@ -230,15 +247,30 @@ section {
     }
 
     .clippy-geometric-left {
-        width: 30rem;
-        height: 40rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
     }
 
 
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
+        width: 20rem;
+        height: 30rem;
+    }
+
     .clippy-geometric-right {
+        right: -100px;
+        bottom: 100px;
         width: 15rem;
         height: 15rem;
     }
+
 }
 
 /* =========================================================
@@ -247,7 +279,7 @@ section {
 
 @media (max-width: 900px) {
     section {
-        scroll-margin-top: 80px;
+        scroll-margin-top: 64px;
     }
 
     .text-caroussel h3 {
@@ -255,14 +287,28 @@ section {
     }
 
     .clippy-geometric-left {
-        width: 30rem;
-        height: 40rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
     }
 
+
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
+        width: 20rem;
+        height: 30rem;
+    }
 
     .clippy-geometric-right {
-        width: 15rem;
+        right: -100px;
+        bottom: 100px;
+        width: 30rem;
         height: 15rem;
     }
-}
 
+}

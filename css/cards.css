@@ -92,6 +92,9 @@
     font-weight: 400;
 }
 
+
+
+
 /* animação escrevendo */
 @keyframes typing {
     from {
@@ -103,19 +106,92 @@
     }
 }
 
-/* cursor piscando */
-@keyframes blink {
-    50% {
-        border-color: transparent
+/* ANIMAÇÃO */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }
 
-/* acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-    .card {
-        transition: none;
-        opacity: 1;
-        transform: none;
-        filter: none;
+/* RESPONSIVO */
+
+/* TABLET */
+@media (max-width:1024px) {
+
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+
+    .container-cards {
+
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .fachadas-h2 h2 {
+        font-size: 1rem;
+    }
+
+    .img-card {
+
+        height: 190px;
+    }
+
+    .container-servicos {
+        position: relative;
+        z-index: 2;
+    }
+
+    .card {
+        position: relative;
+        z-index: 2;
+    }
+
+}
+
+/* MOBILE PEQUENO */
+@media (max-width:480px) {
+
+    .container-servicos {
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .card__description {
+        font-size: 0.8rem;
+    }
+
+    .carrousel-img img {
+        width: 80px;
+
+    }
+
+    .container-servicos {
+        position: relative;
+        z-index: 2;
+    }
+
+    .card {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-left: 25px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
 }

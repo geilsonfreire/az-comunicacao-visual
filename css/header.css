@@ -142,7 +142,7 @@ header nav {
     font-weight: 700;
     margin-left: 190px;
     margin-top: 20px;
-    
+
 }
 
 .botton-agende:hover {
@@ -151,11 +151,11 @@ header nav {
 }
 
 .botton-agende a {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
 }
 
 
-.botton-agende a:hover{
+.botton-agende a:hover {
     color: #000000;
 }
 
@@ -282,70 +282,75 @@ header nav {
 ========================================================= */
 
 @media (max-width: 480px) {
+
     /* Label to page 1 */
     .Label-top-left {
         border-top: 200px solid transparent;
         border-right: 180px solid #750000;
-        border-bottom: 180px solid 
+        border-bottom: 180px solid
     }
 
     img.logo-az {
-        height: 6rem;
+        height: 2rem;
         margin: 1rem;
     }
 
-    
+
     /* Ícone menu */
     .menu-toggle {
         display: block;
         position: absolute;
         right: 5%;
-    } 
+    }
 
-   
+
     .menu-list {
-        display: block;
-        position:fixed;
-        flex-direction:column;
-        top: 100px;
-        right:0;
-        width:60%;
-        height: 100vh;
-        padding:40px 20px;
-        background:rgba(120, 0, 0, 0.534);
-        backdrop-filter:blur(20px);
-        transition:0.4s;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0a1a2f;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: 0.4s;
     }
 
-    .menu-list li{
-        margin-bottom: 20px;
-    }
-
-    .text-orcamento-aqui a {
-        font-size: 1rem;
-    }
-
-    /* MOSTRAR AO PASSAR O MOUSE */
-    .menu-servicos:focus-within .menu-dropdown {
-        opacity: 1;
-        visibility: visible;
+    .menu-list.active {
         transform: translateY(0);
     }
 
+    /* dropdown mobile */
 
-    
+    .menu-dropdown {
+        position: static;
+        background: none;
+        box-shadow: none;
+        display: block;
+    }
+
+    .menu-dropdown li a {
+        color: white;
+    }
+
 }
+
+
+
 
 /* =========================================================
    CELULAR PEQUENO (<= 768px)
 ========================================================= */
 
 @media (max-width: 768px) {
-     /* Label to page 1 */
+
+    /* Label to page 1 */
     .Label-top-left {
         border-top: 200px solid transparent;
         border-right: 180px solid #750000;
-        border-bottom: 180px solid 
+        border-bottom: 180px solid
     }
 
     img.logo-az {
@@ -359,30 +364,31 @@ header nav {
         top: 50%;
     }
 
-    
+
     /* Ícone menu */
     .menu-toggle {
         display: block;
         position: absolute;
         right: 5%;
-    } 
-
-   
-    .menu-list {
-        display: block;
-        position:fixed;
-        flex-direction:column;
-        top: 100px;
-        right:0;
-        width:60%;
-        height: 100vh;
-        padding:40px 20px;
-        background:rgba(120, 0, 0, 0.534);
-        backdrop-filter:blur(20px);
-        transition:0.4s;
     }
 
-    .menu-list li{
+
+    .menu-list {
+        display: block;
+        position: fixed;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        padding: 40px 20px;
+        background: rgba(120, 0, 0, 0.534);
+        backdrop-filter: blur(20px);
+        transition: 0.4s;
+
+    }
+
+    .menu-list li {
         margin-bottom: 20px;
     }
 

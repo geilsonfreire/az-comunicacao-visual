@@ -125,8 +125,17 @@ iframe {
         font-size: 25px;
         display: flex;
         gap: 20px;
-    
+        width: 100%;
+
     }
+
+    .img-card {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+    }
+
 
 }
 
@@ -135,8 +144,17 @@ iframe {
         font-size: 25px;
         display: flex;
         gap: 20px;
-    
+        width: 100%;
+
     }
+
+    .img-card {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+    }
+
 
 }
 
@@ -146,7 +164,16 @@ iframe {
         font-size: 25px;
         display: flex;
         gap: 20px;
-    
+        width: 100%;
+
     }
-    
+
+    .img-card {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        display: block;
+    }
+
+
 }
