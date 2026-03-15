@@ -139,9 +139,6 @@ header nav {
 
 .text-orcamento-aqui a {
     font-size: 1.1rem;
-}
-
-.text-orcamento-aqui a:hover {
     color: #000000;
 }
 
@@ -252,6 +249,17 @@ header nav {
         margin: 1.5rem;
     }
 
+    .text-orcamento-aqui {
+        padding: .2rem 1rem;
+        border-radius: 20px;
+        border: solid 1px #f6ff00;
+        background: #4ee906;
+        text-align: center;
+    }
+
+    .text-orcamento-aqui a {
+        font-size: 0.8rem;
+    }
 
 }
 

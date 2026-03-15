@@ -1,16 +1,14 @@
 .container-about {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     height: 100%;
-    padding-top: 4px;
-    justify-content: space-between;
 }
 
 .container-about-wapper-carrocel {
-    position: relative;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     height: 100%;
     padding-top: 4px;
 }
@@ -23,7 +21,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-
 }
 
 .about-video-wrapper video {
@@ -38,26 +35,28 @@
 
 .about-carousel {
     position: relative;
-    width: 30rem;
-    height: 15rem;
+    width: 50rem;
+    height: 25rem;
     overflow: hidden;
     display: flex;
-    margin-left: 160px;
-    margin-top: 50px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 
 .about-card {
     position: absolute;
     inset: 0;
-    padding: 3rem;
+    padding: 1rem 3rem;
     color: white;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 80px;
-
 }
 
 /* Primeira entra */
@@ -115,7 +114,7 @@
 .about-card h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -143,10 +142,9 @@
     line-height: 1.7;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
-    text-align: center;
-    /* centraliza texto */
+    text-align: justify;
+    letter-spacing: 2px;
     display: flex;
-    margin-right: auto;
 
 }
 
@@ -156,14 +154,10 @@
 .about-inf-card {
     position: relative;
     width: 40rem;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    margin-left: -120px;
-    margin-right: 15rem;
-    margin-bottom: 10rem;
     height: 15rem;
-    margin-top: 300px;
+    display: flex;
+    gap: 20px;
+    margin-left: 2rem;
 }
 
 .info-card {
@@ -200,10 +194,11 @@
 }
 
 .info-card p {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     line-height: 1.4;
     color: #333;
     font-weight: 300;
+    text-align: start;
 }
 
 /* =========================================================
@@ -217,6 +212,52 @@
    - Celular pequeno: até 480px
 ========================================================= */
 
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+@media (max-width: 900px) {
+
+   .about-carousel {
+        width: 55rem;
+        margin: 0 auto;
+    }
+
+    .about-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+@media (max-width: 768px) {
+
+    .about-carousel {
+        width: 50rem;
+        margin: 0 auto;
+    }
+
+    .about-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+
+}
 
 /* =========================================================
    CELULAR PEQUENO (<= 480px)
@@ -224,126 +265,47 @@
 @media (max-width: 480px) {
 
     .about-carousel {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        margin-left: -20px;
-        text-align: center;
+        width: 26rem;
+        margin: 0;
+        margin-left: 1%;
 
     }
 
-    .about-carousel h2 {
-        font-size: 1.2rem;
-        margin-left: -60px;
+    .about-card h2 {
+        font-size: 1.5rem;
     }
 
-    .about-carousel p {
+    .about-card p {
         font-size: 1rem;
-        margin-left: -60px;
-        text-align: center;
-        width: 100%;
+        line-height: 1.7;
+        font-weight: 500;
     }
-
-
 
     .about-inf-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0;
-
-
+        width: 25rem;
+        height: 10rem;
+        gap: 5px;
+        margin-left: 2%;
     }
-
 
     .info-card {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        height: 100%;
-        margin-right: 240px;
-        margin-bottom: 50px;
-        margin-top: -50px;
-
+        width: 100%;
+        padding: 0.5rem;
     }
 
-    .info-card p {
-        font-size: 0.8rem;
-        line-height: 1.4;
-        color: #000000;
-        font-weight: 400;
+    .info-card img {
+        width: auto;
+        max-height: 2rem;
+        margin-bottom: 0.55rem;
     }
 
     .info-card h3 {
-        font-size: .9rem;
-        font-weight: 700;
-        color: #750000;
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        font-size: .7rem;
+        margin-bottom: 0.2rem;
     }
 
-
-    .about-carousel {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
+    .info-card p {
+        font-size: 0.6rem;
     }
-
-    .about-card {
-        position: relative;
-        transform: translateX(0);
-        margin-bottom: 1rem;
-    }
-
-    .about-video-wrapper {
-        position: absolute;
-
-        rotate: 0deg;
-        margin-bottom: 1rem;
-    }
-
-    .about-video-wrapper video {
-        width: 100%;
-        justify-content: center;
-        height: auto;
-        margin-left: 0;
-
-    }
-
 
 }
-
-/* =========================================================
-   CELULAR PEQUENO (<= 768px)
-========================================================= */
-@media (max-width: 768px) {
-
-    .container-about-wapper-carrocel {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-carousel {
-        max-width: 100%;
-    }
-
-    .about-video-wrapper video {
-        max-width: 100%;
-    }
-
-    .about-inf-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-
-
-}
-
-
