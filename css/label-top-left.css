@@ -1,0 +1,73 @@
+/* Label to page 1 */
+.Label-top-left {
+    width: 0;
+    height: 0;
+    border-top: 250px solid transparent;
+    border-right: 200px solid #750000;
+    border-bottom: 200px solid transparent;
+    position: absolute;
+    top: -200px;
+    left: -50px;
+    rotate: calc(40deg);
+    z-index: 2;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid
+    }
+
+}
+
+
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+    /* Label to page 1 */
+    .Label-top-left {
+        border-top: 200px solid transparent;
+        border-right: 180px solid #750000;
+        border-bottom: 180px solid
+    }
+
+}

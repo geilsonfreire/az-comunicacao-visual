@@ -21,19 +21,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Label to page 1 */
-.Label-top-left {
-    width: 0;
-    height: 0;
-    border-top: 250px solid transparent;
-    border-right: 200px solid #750000;
-    border-bottom: 200px solid transparent;
-    position: absolute;
-    top: -200px;
-    left: -50px;
-    rotate: calc(40deg);
-    z-index: 2;
-}
+
 
 img.logo-az {
     width: auto;
@@ -256,13 +244,6 @@ header nav {
 
 @media (max-width: 480px) {
 
-    /* Label to page 1 */
-    .Label-top-left {
-        border-top: 200px solid transparent;
-        border-right: 180px solid #750000;
-        border-bottom: 180px solid
-    }
-
     img.logo-az {
         height: 2rem;
         margin: 1rem;
@@ -330,22 +311,9 @@ header nav {
 
 @media (max-width: 768px) {
 
-    /* Label to page 1 */
-    .Label-top-left {
-        border-top: 200px solid transparent;
-        border-right: 180px solid #750000;
-        border-bottom: 180px solid
-    }
-
     img.logo-az {
         height: 6rem;
         margin: 1rem;
-    }
-
-    .Label-top-right {
-        width: 40%;
-        height: 30%;
-        top: 50%;
     }
 
 
@@ -423,12 +391,6 @@ header nav {
     img.logo-az {
         height: 8rem;
         margin: 1.5rem;
-    }
-
-    .Label-top-right {
-        width: 50%;
-        height: 40%;
-        top: 50%;
     }
 
 
