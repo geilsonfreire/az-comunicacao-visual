@@ -19,7 +19,7 @@
     left: -20px;
     width: 120px;
     height: 50px;
-    z-index: 20;
+    z-index: 1;
     color: #ffffff
 }
 
@@ -32,25 +32,6 @@
 
 .caroussel-group {
     width: 100%;
-}
-
-
-.text-caroussel {
-    top: 0;
-    left: 0;
-    background-color: #750000;
-    text-align: center;
-    z-index: 2;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.text-caroussel h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: bold;
-    color: #000000;
 }
 
 .carrousel-img {
@@ -103,9 +84,7 @@
 
 @media (max-width: 900px) {
 
-    .text-caroussel h3 {
-        display: none;
-    }
+   
 
 }
 
@@ -116,10 +95,6 @@
 
 @media (max-width: 768px) {
 
-    .text-caroussel h3 {
-        display: none;
-    }
-
 }
 
 /* =========================================================
@@ -127,9 +102,5 @@
 ========================================================= */
 
 @media (max-width: 480px) {
-
-    .text-caroussel h3 {
-        display: none;
-    }
 
 }
