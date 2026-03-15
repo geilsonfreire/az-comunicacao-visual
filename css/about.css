@@ -218,7 +218,7 @@
 @media (max-width: 900px) {
 
    .about-carousel {
-        width: 55rem;
+        width: 53rem;
         margin: 0 auto;
     }
 
@@ -242,7 +242,7 @@
 @media (max-width: 768px) {
 
     .about-carousel {
-        width: 50rem;
+        width: 48rem;
         margin: 0 auto;
     }
 
@@ -265,14 +265,12 @@
 @media (max-width: 480px) {
 
     .about-carousel {
-        width: 26rem;
-        margin: 0;
-        margin-left: 1%;
-
+        width: 30rem;
+        margin: 0 auto;
     }
 
     .about-card h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .about-card p {
