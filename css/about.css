@@ -206,41 +206,21 @@
     font-weight: 300;
 }
 
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
 
 
-
-
-@media (max-width: 768px) {
-
-    .container-about-wapper-carrocel {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-carousel {
-        max-width: 100%;
-    }
-
-    .about-video-wrapper video {
-        max-width: 100%;
-    }
-
-    .about-inf-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-
-
-}
-
-/* ===================== */
-/* MOBILE */
-/* ===================== */
-
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
 @media (max-width: 480px) {
 
     .about-carousel {
@@ -253,11 +233,12 @@
 
     }
 
-    .about-carousel h2  {
+    .about-carousel h2 {
         font-size: 1.2rem;
         margin-left: -60px;
     }
-    .about-carousel p  {
+
+    .about-carousel p {
         font-size: 1rem;
         margin-left: -60px;
         text-align: center;
@@ -334,3 +315,35 @@
 
 
 }
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+@media (max-width: 768px) {
+
+    .container-about-wapper-carrocel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-carousel {
+        max-width: 100%;
+    }
+
+    .about-video-wrapper video {
+        max-width: 100%;
+    }
+
+    .about-inf-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+
+
+}
+
+
