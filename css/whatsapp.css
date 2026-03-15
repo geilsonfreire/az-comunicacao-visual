@@ -217,46 +217,9 @@
 ========================================================= */
 
 
-/* =========================================================
-   CELULAR PEQUENO (<= 480px)
-========================================================= */
-@media (max-width: 480px) {
-    /* Wrapper */
-    .whatsapp-wrapper {
-        bottom: 0.5rem;
-        right: 1.5rem;
-    }
-    /* Tooltip */
-    .whatsapp-tooltip {
-        max-width: fit-content;
-        height: auto; 
-    }
 
-    .whatsapp-tooltip span {
-        font-size: 1.1rem;
-    }
 
-}
 
-/* =========================================================
-   CELULAR PEQUENO (<= 768px)
-========================================================= */
-@media (max-width: 768px) {
-     /* Wrapper */
-    .whatsapp-wrapper {
-        bottom: 0.5rem;
-        right: 1.5rem;
-    }
-    /* Tooltip */
-    .whatsapp-tooltip {
-        max-width: fit-content;
-        height: auto; 
-    }
-
-    .whatsapp-tooltip span {
-        font-size: 1.5rem;
-    }
-}
 
 /* =========================================================
    CELULAR PEQUENO (<= 900px)
@@ -282,6 +245,53 @@
         bottom: 2rem;
         right: 1.5rem;
         width: 20rem;
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+@media (max-width: 768px) {
+
+    /* Wrapper */
+    .whatsapp-wrapper {
+        bottom: 6rem;
+        right: 1.5rem;
+    }
+
+    /* Tooltip */
+    .whatsapp-tooltip {
+        max-width: fit-content;
+        height: auto;
+    }
+
+    .whatsapp-tooltip span {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+@media (max-width: 480px) {
+
+    /* Wrapper */
+    .whatsapp-wrapper {
+        bottom: 6rem;
+        right: 1rem;
+    }
+
+    /* Tooltip */
+    .whatsapp-tooltip {
+        width: fit-content;
+        height: auto;
+    }
+
+    .whatsapp-tooltip span {
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
 }

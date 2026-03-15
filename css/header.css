@@ -237,71 +237,23 @@ header nav {
    - Celular pequeno: até 480px
 ========================================================= */
 
-
 /* =========================================================
-   CELULAR PEQUENO (<= 480px)
+   CELULAR PEQUENO (<= 900px)
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
+    .menu-list {
+        margin-right: 0;
+        margin-left: 5%;
+    }
 
     img.logo-az {
-        height: 2rem;
-        margin: 1rem;
+        height: 8rem;
+        margin: 1.5rem;
     }
 
 
-    /* Ícone menu */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 5%;
-        z-index: 1001;
-    } 
-
-    .menu-list {
-        position:fixed;
-        flex-direction:column;
-        top: 100px;
-        right:0;
-        width:60%;
-        height: 100vh;
-        padding:40px 20px;
-        background:rgba(120, 0, 0, 0.534);
-        backdrop-filter:blur(20px);
-        transition:0.4s;
-
-        /* estado fechado */
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translateX(100%);
-        z-index: 1000;
-    }
-
-    .menu-list.active {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateX(0);
-    }
-
-    .text-orcamento-aqui a {
-        font-size: 1rem;
-    }
-
-    .menu-dropdown {
-        width: 250px;
-    }
-
-    /* MOSTRAR AO clicar O MOUSE */
-    .menu-servicos:focus-within .menu-dropdown {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-    
 }
-
 
 
 
@@ -378,20 +330,67 @@ header nav {
 
 }
 
+
 /* =========================================================
-   CELULAR PEQUENO (<= 900px)
+   CELULAR PEQUENO (<= 480px)
 ========================================================= */
 
-@media (max-width: 900px) {
-    .menu-list {
-        margin-right: 0;
-        margin-left: 5%;
-    }
+@media (max-width: 480px) {
 
     img.logo-az {
-        height: 8rem;
-        margin: 1.5rem;
+        height: 2rem;
+        margin: 1rem;
     }
 
+
+    /* Ícone menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+        z-index: 1001;
+    }
+
+    .menu-list {
+        position: fixed;
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        padding: 40px 20px;
+        background: rgba(120, 0, 0, 0.534);
+        backdrop-filter: blur(20px);
+        transition: 0.4s;
+
+        /* estado fechado */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    .menu-list.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+
+    .text-orcamento-aqui a {
+        font-size: 1rem;
+    }
+
+    .menu-dropdown {
+        width: 250px;
+    }
+
+    /* MOSTRAR AO clicar O MOUSE */
+    .menu-servicos:focus-within .menu-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 
 }

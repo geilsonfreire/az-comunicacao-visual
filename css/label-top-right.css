@@ -29,37 +29,38 @@
 
 
 /*Lista de redes sociais*/
-ul.social-media {
+.social-media {
     position: fixed;
     top: 50%;
     right: 3rem;
     transform: translateY(-50%);
     display: flex;
+    flex-direction: column;
     gap: 30px;
     z-index: 3;
 }
 
-ul.social-media li i {
+.social-media li i {
     color: white;
     font-size: 3rem;
     transition: 0.3s;
 }
 
-ul.social-media li i:hover {
+.social-media li i:hover {
     color: #ffcc00;
 }
 
-ul.social-media li a i {
+.social-media li a i {
     transition: all 0.3s ease-in-out;
     filter: drop-shadow(0 5px 5px black);
 }
 
-ul.social-media li .fa-solid {
+.social-media li .fa-solid {
     transition: all 0.3s ease-in-out;
     filter: drop-shadow(0 5px 5px black);
 }
 
-ul.social-media li a i:hover {
+.social-media li a i:hover {
     transform: scale(1.2);
 }
 
@@ -95,15 +96,24 @@ ul.social-media li a i:hover {
 
 
 /* =========================================================
-   CELULAR PEQUENO (<= 480px)
+   CELULAR PEQUENO (<= 900px)
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
 
+    .Label-top-right {
+        width: 40%;
+        height: 30%;
+        top: 35%;
+        right: 0px;
+    }
+
+    /*Lista de redes sociais*/
+    .social-media {
+        top: 65%;
+    }
+    
 }
-
-
-
 
 /* =========================================================
    CELULAR PEQUENO (<= 768px)
@@ -113,22 +123,25 @@ ul.social-media li a i:hover {
 
     .Label-top-right {
         width: 40%;
-        height: 30%;
-        top: 50%;
+        height: 40%;
+        top: 35%;
+        right: 0px;
     }
 
+    /*Lista de redes sociais*/
+    .social-media {
+        top: 75%;
+    }
 }
 
+
 /* =========================================================
-   CELULAR PEQUENO (<= 900px)
+   CELULAR PEQUENO (<= 480px)
 ========================================================= */
 
-@media (max-width: 900px) {
-
+@media (max-width: 480px) {
     .Label-top-right {
-        width: 40%;
-        height: 30%;
-        top: 50%;
+        display: none;
     }
-    
+
 }

@@ -1,0 +1,141 @@
+/*Geometria geral*/
+.clippy-geometrics {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.clippy-geometric-left {
+    clip-path: polygon(0 0, 0 0, 38% 51%, 0 100%);
+    background-color: #750000;
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 0;
+}
+
+.clippy-geometric-right {
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 60% 100%, 0% 20%);
+    background-color: #750000;
+    width: 15rem;
+    height: 20rem;
+    top: 100%;
+    transform: translateY(-100%);
+    right: 0px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .clippy-geometric-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .clippy-geometric-right {
+        right: -100px;
+        bottom: 100px;
+        width: 30rem;
+        height: 15rem;
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .clippy-geometric-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .clippy-geometric-right {
+        right: -100px;
+        bottom: 100px;
+        width: 15rem;
+        height: 15rem;
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .clippy-geometric-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    .clippy-geometric-left {
+        left: -100px;
+        top: 100px;
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .clippy-geometric-right {
+        right: -100px;
+        bottom: 100px;
+        width: 15rem;
+        height: 15rem;
+    }
+
+}

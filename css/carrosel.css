@@ -1,0 +1,135 @@
+/* CARROSEL CLIENTES E PARCEIROS */
+.container-track {
+    background: #ffffff;
+    display: flex;
+    min-width: 100%;
+    margin-top: 40px;
+    padding: 0.5rem;
+    border-top: 2px solid #f5b400;
+}
+
+.container-track::before {
+    content: "   Nossos Clientes";
+    position: relative;
+    background-color: #750000;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 0px;
+    left: -20px;
+    width: 120px;
+    height: 50px;
+    z-index: 20;
+    color: #ffffff
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    animation: scroll 15s linear infinite;
+
+}
+
+.caroussel-group {
+    width: 100%;
+}
+
+
+.text-caroussel {
+    top: 0;
+    left: 0;
+    background-color: #750000;
+    text-align: center;
+    z-index: 2;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.text-caroussel h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.carrousel-img {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.carrousel-img img {
+    width: auto;
+    height: 30px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.35s ease;
+}
+
+.carrousel-img img:hover {
+    transform: scale(1.3);
+}
+
+
+
+/* Loop infinito suave */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .text-caroussel h3 {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .text-caroussel h3 {
+        display: none;
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .text-caroussel h3 {
+        display: none;
+    }
+
+}

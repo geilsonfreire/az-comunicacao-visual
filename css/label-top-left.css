@@ -25,11 +25,12 @@
 ========================================================= */
 
 
+
 /* =========================================================
-   CELULAR PEQUENO (<= 480px)
+   CELULAR PEQUENO (<= 900px)
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
 
     /* Label to page 1 */
     .Label-top-left {
@@ -39,7 +40,6 @@
     }
 
 }
-
 
 
 
@@ -58,11 +58,13 @@
 
 }
 
+
 /* =========================================================
-   CELULAR PEQUENO (<= 900px)
+   CELULAR PEQUENO (<= 480px)
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 480px) {
+
     /* Label to page 1 */
     .Label-top-left {
         border-top: 200px solid transparent;
