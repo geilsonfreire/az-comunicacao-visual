@@ -280,7 +280,7 @@
     /* Wrapper */
     .whatsapp-wrapper {
         bottom: 6rem;
-        right: 1rem;
+        right: 2rem;
     }
 
     /* Tooltip */
@@ -290,7 +290,7 @@
     }
 
     .whatsapp-tooltip span {
-        font-size: 0.85rem;
+        font-size: 1rem;
         line-height: 1.4;
     }
 
