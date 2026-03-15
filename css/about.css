@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 100%;
     padding-top: 4px;
+    justify-content: space-between;
 }
 
 .container-about-wapper-carrocel {
@@ -22,12 +23,12 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+
 }
 
 .about-video-wrapper video {
     width: 100%;
     height: 100%;
-    
     object-fit: cover;
 }
 
@@ -40,15 +41,23 @@
     width: 30rem;
     height: 15rem;
     overflow: hidden;
-    margin-left: auto;
+    display: flex;
+    margin-left: 160px;
+    margin-top: 50px;
+
 }
 
 .about-card {
     position: absolute;
     inset: 0;
-    padding: 2rem;
+    padding: 3rem;
     color: white;
-    transform: translateX(100%);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 80px;
+
 }
 
 /* Primeira entra */
@@ -104,23 +113,29 @@
 }
 
 .about-card h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
     margin-bottom: 1rem;
+    text-align: center;
+    /* centraliza texto */
+    margin-left: auto;
 }
 
 .about-card h2::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
+    /* centraliza a linha */
+    transform: translateX(-50%);
     bottom: -6px;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, #f6ff00, #ff0000);
+    margin-right: auto;
 }
 
 .about-card p {
@@ -128,19 +143,27 @@
     line-height: 1.7;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    /* centraliza texto */
+    display: flex;
+    margin-right: auto;
+
 }
 
 /*==============
     Container de about missão, visão e valores
 ==============*/
 .about-inf-card {
+    position: relative;
     width: 40rem;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    margin-left: auto;
+    margin-left: -120px;
     margin-right: 15rem;
     margin-bottom: 10rem;
+    height: 15rem;
+    margin-top: 300px;
 }
 
 .info-card {
@@ -204,9 +227,10 @@
 
     .about-inf-card {
         display: flex;
-
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+
     }
 
 
@@ -219,13 +243,64 @@
 
 @media (max-width: 480px) {
 
+    .about-carousel {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: -20px;
+        text-align: center;
+
+    }
+
+    .about-carousel h2  {
+        font-size: 1.2rem;
+        margin-left: -60px;
+    }
+    .about-carousel p  {
+        font-size: 1rem;
+        margin-left: -60px;
+        text-align: center;
+        width: 100%;
+    }
+
+
 
     .about-inf-card {
-       
+        display: flex;
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        
+
+
+    }
+
+
+    .info-card {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        margin-right: 240px;
+        margin-bottom: 50px;
+        margin-top: -50px;
+
+    }
+
+    .info-card p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        color: #000000;
+        font-weight: 400;
+    }
+
+    .info-card h3 {
+        font-size: .9rem;
+        font-weight: 700;
+        color: #750000;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
 
@@ -251,13 +326,11 @@
 
     .about-video-wrapper video {
         width: 100%;
-        
         justify-content: center;
         height: auto;
         margin-left: 0;
-        
+
     }
-    
 
 
 }
