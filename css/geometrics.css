@@ -1,10 +1,11 @@
 /*Geometria geral*/
 .clippy-geometrics {
     position: absolute;
-    inset: 0;
-    pointer-events: none;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
+    inset: 0;
+    z-index: 1;
 }
 
 
@@ -48,27 +49,12 @@
 @media (max-width: 900px) {
 
     .clippy-geometric-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-
-    .clippy-geometric-left {
-        left: -100px;
-        top: 100px;
         width: 20rem;
         height: 30rem;
     }
 
     .clippy-geometric-right {
-        right: -100px;
-        bottom: 100px;
-        width: 30rem;
+        width: 25rem;
         height: 15rem;
     }
 
@@ -81,26 +67,11 @@
 @media (max-width: 768px) {
 
     .clippy-geometric-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-    }
-
-
-    .clippy-geometric-left {
-        left: -100px;
-        top: 100px;
         width: 20rem;
-        height: 30rem;
+        height: 20rem;
     }
 
     .clippy-geometric-right {
-        right: -100px;
-        bottom: 100px;
         width: 15rem;
         height: 15rem;
     }
@@ -114,28 +85,13 @@
 @media (max-width: 480px) {
 
     .clippy-geometric-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
-    }
-
-
-    .clippy-geometric-left {
-        left: -100px;
-        top: 100px;
         width: 20rem;
-        height: 30rem;
+        height: 15rem;
     }
 
     .clippy-geometric-right {
-        right: -100px;
-        bottom: 100px;
-        width: 15rem;
-        height: 15rem;
+        width: 8rem;
+        height: 10rem;
     }
 
 }

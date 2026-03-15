@@ -1,4 +1,12 @@
-/* estado inicial */
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 60rem;
+    height: 25rem;
+    margin: auto auto;
+}
+
 .card {
     opacity: 0;
     transform: translateY(24px) scale(0.985);

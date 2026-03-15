@@ -34,9 +34,6 @@ img.logo-az {
 }
 
 
-
-
-
 /* Menu e Links de navegação */
 header nav {
     width: 100%;
@@ -244,11 +241,6 @@ header nav {
         margin-left: 5%;
     }
 
-    img.logo-az {
-        height: 8rem;
-        margin: 1.5rem;
-    }
-
     .text-orcamento-aqui {
         padding: .2rem 1rem;
         border-radius: 20px;
@@ -270,18 +262,13 @@ header nav {
 ========================================================= */
 
 @media (max-width: 768px) {
-
-    img.logo-az {
-        height: 6rem;
-        margin: 1rem;
-    }
-
-
     /* Ícone menu */
     .menu-toggle {
         display: block;
         position: absolute;
         right: 5%;
+        color: #f6ff00;
+        z-index: 3;
     } 
 
    
@@ -302,7 +289,7 @@ header nav {
         visibility: hidden;
         pointer-events: none;
         transform: translateX(100%);
-        z-index: 1000;
+        z-index: 100;
     }
 
     .menu-list.active {
@@ -344,13 +331,6 @@ header nav {
 ========================================================= */
 
 @media (max-width: 480px) {
-
-    img.logo-az {
-        height: 2rem;
-        margin: 1rem;
-    }
-
-
     /* Ícone menu */
     .menu-toggle {
         display: block;
