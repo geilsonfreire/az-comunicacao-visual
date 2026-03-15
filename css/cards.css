@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    width: 60rem;
-    height: 25rem;
+    width: 90%;
+    height: auto;
     margin: auto auto;
 }
 
@@ -29,31 +29,25 @@
 .card {
     position: relative;
     width: auto;
-    background-color: #f2f2f2;
-    border-radius: 10px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     perspective: 1000px;
-    box-shadow: 0 0 0 5px #ffffff80;
+    box-shadow: 0 0 0 1px #f6ff00;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .img-card {
     width: 100%;
     height: 100%;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     object-fit: cover;
-
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(254, 253, 253, 0.698);
-    border-left: solid 6px #ff0000;
-    border-bottom: solid 6px red;
 }
 
 .card__content {
@@ -65,7 +59,12 @@
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f2f2f2;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -77,26 +76,21 @@
 
 .card__title {
     margin: auto;
-    font-size: 24px;
-    color: #333;
-    font-weight: 700;
-
-}
-
-
-.card__title {
-    margin: auto;
-    font-size: 24px;
-    color: #333;
-    font-weight: 700;
+    font-size: 2rem;
+    color: red;
+    filter: drop-shadow(0 2px 0 #000000);
+    font-weight: bold;
     width: 0;
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    letter-spacing: 2px;
 }
 
+
 .card__description {
-    font-size: 13px;
+    color: #000000;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -125,31 +119,49 @@
     }
 }
 
-/* RESPONSIVO */
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
 
-/* TABLET */
-@media (max-width:1024px) {
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
 
+@media (max-width: 900px) {
     .container-cards {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 60rem;
+        height: 25rem;
+        margin: auto auto;
     }
+
 
 }
 
-/* MOBILE */
-@media (max-width:768px) {
 
-    .container-cards {
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+
+@media (max-width: 768px) {
+
+     .container-cards {
 
         width: 100%;
         height: auto;
         align-items: center;
         justify-content: center;
 
-    }
-
-    .fachadas-h2 h2 {
-        font-size: 1rem;
     }
 
     .img-card {
@@ -169,10 +181,14 @@
 
 }
 
-/* MOBILE PEQUENO */
-@media (max-width:480px) {
 
-    .container-servicos {
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+
+     .container-servicos {
         width: 100%;
         height: 50%;
 
@@ -201,5 +217,5 @@
         position: relative;
         z-index: 2;
     }
-
+   
 }
