@@ -28,8 +28,20 @@
 }
 
 .botton-agende {
+    display: flex;
+    justify-content: flex-start;
     padding: 2rem;
     background-color: #25c908;
+    border: solid 1px #f6ff00;
+    border-radius: 20px;
+    margin: 2rem;
+    color: white;
+    font-weight: 700;
+}
+
+.botton-agende:hover {
+    background: linear-gradient(90deg, #f6ff00, #ff0000);
+    border: solid 1px #ffffff;
 }
 
 .botton-agende a {
