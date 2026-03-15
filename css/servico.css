@@ -27,6 +27,15 @@
     -webkit-text-fill-color: transparent;
 }
 
+.botton-agende {
+    padding: 2rem;
+    background-color: #25c908;
+}
+
+.botton-agende a {
+    font-size: 2rem;
+}
+
 
 /* =========================================================
    RESPONSIVIDADE
