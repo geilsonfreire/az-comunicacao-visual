@@ -1,36 +1,32 @@
-
 .container-about {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     height: 100%;
-    padding-top: 4px;
 }
 
 .container-about-wapper-carrocel {
-    position: relative;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     height: 100%;
     padding-top: 4px;
 }
+
 
 
 /*About - Video*/
 .about-video-wrapper {
     position: absolute;
-    left: 5rem;
-    rotate: 15deg;
-
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .about-video-wrapper video {
-    width: 18rem;
-    height: auto;
-    margin-left: 5rem;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    border-radius: 25px;
 }
 
 /* ================================
@@ -39,18 +35,28 @@
 
 .about-carousel {
     position: relative;
-    width: 30rem;
-    height: 15rem;
+    width: 50rem;
+    height: 25rem;
     overflow: hidden;
-    margin-left: auto;
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .about-card {
     position: absolute;
     inset: 0;
-    padding: 2rem;
+    padding: 1rem 3rem;
     color: white;
-    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Primeira entra */
@@ -106,23 +112,29 @@
 }
 
 .about-card h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
     margin-bottom: 1rem;
+    text-align: center;
+    /* centraliza texto */
+    margin-left: auto;
 }
 
 .about-card h2::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
+    /* centraliza a linha */
+    transform: translateX(-50%);
     bottom: -6px;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, #f6ff00, #ff0000);
+    margin-right: auto;
 }
 
 .about-card p {
@@ -130,19 +142,22 @@
     line-height: 1.7;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
+    text-align: justify;
+    letter-spacing: 2px;
+    display: flex;
+
 }
 
 /*==============
     Container de about missão, visão e valores
 ==============*/
 .about-inf-card {
+    position: relative;
     width: 40rem;
+    height: 15rem;
     display: flex;
-    justify-content: flex-end;
     gap: 20px;
-    margin-left: auto;
-    margin-right: 15rem;
-    margin-bottom: 10rem;
+    margin-left: 2rem;
 }
 
 .info-card {
@@ -179,8 +194,116 @@
 }
 
 .info-card p {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     line-height: 1.4;
     color: #333;
     font-weight: 300;
+    text-align: start;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
+@media (max-width: 900px) {
+
+   .about-carousel {
+        width: 53rem;
+        margin: 0 auto;
+    }
+
+    .about-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+@media (max-width: 768px) {
+
+    .about-carousel {
+        width: 48rem;
+        margin: 0 auto;
+    }
+
+    .about-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+@media (max-width: 480px) {
+
+    .about-carousel {
+        width: 30rem;
+        margin: 0 auto;
+    }
+
+    .about-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+
+    .about-inf-card {
+        width: 25rem;
+        height: 10rem;
+        gap: 5px;
+        margin-left: 2%;
+    }
+
+    .info-card {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .info-card img {
+        width: auto;
+        max-height: 2rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .info-card h3 {
+        font-size: .7rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .info-card p {
+        font-size: 0.6rem;
+    }
+
 }

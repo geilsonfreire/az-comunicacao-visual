@@ -1,13 +1,160 @@
 /* ================================
    WHATSAPP BOTÃO FLUTUANTE
 ================================ */
+/* Wrapper */
+.whatsapp-wrapper {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 999;
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    background: #fff;
+    color: #333;
+    padding: 10px 14px;
+    border-radius: 8px;
+    
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.whatsapp-tooltip span {
+    font-size: 1.5rem;
+}
+
+/* Mostrar tooltip */
+.whatsapp-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pequena seta */
+.whatsapp-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+/* Chat Box */
+
+.whatsapp-chat {
+
+    position: absolute;
+    bottom: 2rem;
+    right: 1.5rem;
+    width: 20rem;
+    height: auto;
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+
+    transition: all .35s ease;
+
+}
+
+/* Mostrar chat */
+
+.whatsapp-chat.show {
+
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+
+}
+
+/* Header */
+
+.chat-header {
+
+    background: #25D366;
+    color: white;
+
+    padding: 10px 14px;
+
+    font-weight: 600;
+
+    border-radius: 12px 12px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.chat-header img {
+    width: auto;
+    height: 8rem;
+}
+
+.chat-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* Corpo */
+
+.chat-body {
+
+    padding: 16px;
+    font-size: 14px;
+    color: #333;
+
+}
+
+/* Botão */
+
+.chat-button {
+
+    display: block;
+
+    margin: 0 16px 16px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
 
 .whatsapp-btn {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 64px;
-    height: 64px;
+    bottom: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
     background: #25D366;
     border-radius: 50%;
     display: flex;
@@ -48,84 +195,103 @@
     }
 }
 
-/* Wrapper */
-.whatsapp-wrapper {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 999;
-}
-
-/* Tooltip */
-.whatsapp-tooltip {
-    position: absolute;
-    bottom: 75px;
-    right: 0;
-    background: #fff;
-    color: #333;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* Mostrar tooltip */
-.whatsapp-tooltip.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Pequena seta */
-.whatsapp-tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    right: 20px;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    transform: rotate(45deg);
-}
-
-/* Ícone */
-.tooltip-icon {
-    margin-right: 6px;
+.whatsapp-btn-ico {
+    font-size: 4rem;
 }
 
 
 
-/* Mobile ajuste */
-@media (max-width: 480px) {
-    .whatsapp-btn {
-        width: 58px;
-        height: 58px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
-}
 
-@media (max-width: 768px) {
-    .whatsapp-btn {
-        width: 90px;
-        height: 90px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
-}
 
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Base atual = desktop
+   Breakpoints:
+   - Notebook/PC grande: 1200px+
+   - Notebook: até 1199px
+   - Tablet: até 991px
+   - Celular: até 767px
+   - Celular pequeno: até 480px
+========================================================= */
+
+
+
+
+
+
+/* =========================================================
+   CELULAR PEQUENO (<= 900px)
+========================================================= */
 @media (max-width: 900px) {
-    .whatsapp-btn {
-        width: 100px;
-        height: 100px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
+      /* Wrapper */
+    .whatsapp-wrapper {
+        bottom: 7rem;
+        right: 1.5rem;
     }
+    /* Tooltip */
+    .whatsapp-tooltip {
+        max-width: fit-content;
+        height: auto; 
+    }
+
+    .whatsapp-tooltip span {
+        font-size: 2rem;
+    }
+
+    /* Chat Box */
+    .whatsapp-chat {
+        bottom: 2rem;
+        right: 1.5rem;
+        width: 20rem;
+    }
+
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 768px)
+========================================================= */
+@media (max-width: 768px) {
+
+    /* Wrapper */
+    .whatsapp-wrapper {
+        bottom: 6rem;
+        right: 1.5rem;
+    }
+
+    /* Tooltip */
+    .whatsapp-tooltip {
+        max-width: fit-content;
+        height: auto;
+    }
+
+    .whatsapp-tooltip span {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+}
+
+/* =========================================================
+   CELULAR PEQUENO (<= 480px)
+========================================================= */
+@media (max-width: 480px) {
+
+    /* Wrapper */
+    .whatsapp-wrapper {
+        bottom: 6rem;
+        right: 2rem;
+    }
+
+    /* Tooltip */
+    .whatsapp-tooltip {
+        width: fit-content;
+        height: auto;
+    }
+
+    .whatsapp-tooltip span {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
 }
