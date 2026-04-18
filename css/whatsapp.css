@@ -162,6 +162,7 @@
     justify-content: center;
     color: #fff;
     font-size: 28px;
+    cursor: pointer;
     z-index: 999;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;

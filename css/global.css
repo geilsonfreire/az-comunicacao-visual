@@ -8,6 +8,18 @@
     font-family: "Montserrat", sans-serif;
 }
 
+ul, ol, a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+video, audio {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 img {
     max-width: 100%;
     height: auto;
